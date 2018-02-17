@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Photo Wall</title>
+<!-- CSS file reference links--> 
+<link rel="stylesheet" href="Style.css" />
 <!-- JQuery-mobile reference links--> 
 <link rel="stylesheet" href="jquery.mobile-1.4.5/themes/myTheme.css" />
 <link rel="stylesheet" href="jquery.mobile-1.4.5/themes/jquery.mobile.icons.min.css" />
@@ -22,20 +24,20 @@
 <body>
 
     <div data-role = "page" id="page1" data-theme = "d">
-    <div data-role = "header">
-        <h1> Photo Wall</h1>
+    <div id="header" data-role = "header">
+        <h1 id="Title"> Photo Wall</h1>
     </div>
         
     <div data-role = "main" class = "ui-content.">
-    <a class="ui-btn ui-icon-camera ui-btn-icon-left "> </a>
+    <a class="ui-btn ui-icon-camera ui-btn-icon-bottom "> </a>
     <label id="addlabel">Add to wall </label>
-    <button class="ui-btn ui-icon-eye ui-btn-icon-left  "> </button>
+    <a class="ui-btn ui-icon-eye ui-btn-icon-bottom "> </a>
     <label id="viewlabel"> View the wall </label>
         
     
     </div>
     
-    <div data-role = "footer">
+    <div id = "footer" data-role = "footer">
     <h2> &copy; Charlie Clarke 2018</h2>
     </div>
     

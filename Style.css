@@ -1,0 +1,50 @@
+#footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    font-size: 15px;
+    color: skyblue;
+    border-top-width: 3px;
+    border-top-color: #140f0a;
+    }
+
+#header{
+border-bottom-width: 3px;
+border-top-color: #140f0a
+
+}
+
+#Title{
+    font-size: 18px;
+    color: skyblue;
+}
+
+.ui-icon-camera{
+    width: 5px;
+    position: relative;
+    top:185px;
+    left:28%;
+}
+
+.ui-icon-eye{
+    width: 5px;
+    position: relative;
+    top:100px;
+    left: 56%;
+    
+}
+
+#addlabel{
+    position: relative;
+    left:27%;
+    top:180px;
+    font-size: 14px;
+}
+
+#viewlabel{
+    position: absolute;
+    left:52%;
+    top: 49%;
+    font-size: 14px;
+    
+}
