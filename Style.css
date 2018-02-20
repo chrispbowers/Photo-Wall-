@@ -43,16 +43,16 @@ border-radius: 3px;
 
 #addlabel{
     position: relative;
-    left:27%;
+    left:25%;
     top:180px;
     font-size: 14px;
     font-style: oblique;
 }
 
 #viewlabel{
-    position: absolute;
+    position: relative;
     left:52%;
-    top: 51%;
+    top: 91px;
     font-size: 14px;
     font-style: oblique;
     
