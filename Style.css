@@ -4,14 +4,15 @@
     width:100%;
     font-size: 15px;
     color: skyblue;
-    border-top-width: 3px;
+    border-top-width: 5px;
     border-top-color: #140f0a;
+    border-radius: 3px;
     }
 
 #header{
-border-bottom-width: 3px;
-border-top-color: #140f0a
-
+border-bottom-width:5px;
+border-top-color:#140f0a ;
+border-radius: 3px;
 }
 
 #Title{
@@ -45,12 +46,21 @@ border-top-color: #140f0a
     left:27%;
     top:180px;
     font-size: 14px;
+    font-style: oblique;
 }
 
 #viewlabel{
     position: absolute;
     left:52%;
-    top: 50%;
+    top: 51%;
     font-size: 14px;
+    font-style: oblique;
     
+}
+
+#title{
+position: relative;
+left: 57px;
+height: 50px;
+width : 250px;
 }
