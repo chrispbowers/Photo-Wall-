@@ -21,16 +21,22 @@ border-top-color: #140f0a
 
 .ui-icon-camera{
     width: 5px;
+    height : 5px;
     position: relative;
     top:185px;
     left:28%;
+    border-radius: 8px;
+    
 }
 
 .ui-icon-eye{
-    width: 5px;
+    width: 3px;
+    height: 3px;
     position: relative;
-    top:100px;
+    top:97px;
     left: 56%;
+    -webkit-border-radius: .3125em;
+    border-radius:.3125em ;
     
 }
 
@@ -44,7 +50,7 @@ border-top-color: #140f0a
 #viewlabel{
     position: absolute;
     left:52%;
-    top: 49%;
+    top: 50%;
     font-size: 14px;
     
 }
