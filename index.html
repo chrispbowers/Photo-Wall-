@@ -29,7 +29,7 @@
     <div data-role = "main" class = "ui-content.">
     <a class="ui-btn ui-alt-icon  ui-icon-camera ui-btn-icon-bottom  ui-corner-all" onclick="capturePhoto();"> </a>
     <label id="addlabel">Add to wall </label>
-    <a class="ui-btn ui-icon-eye ui-alt-icon ui-btn-icon-bottom ui-corner-all" onclick="window.location.href='page2'"> </a>
+    <a class="ui-btn ui-icon-eye ui-alt-icon ui-btn-icon-bottom ui-corner-all" onclick="window.location.href='#page2'"> </a>
     <label id="viewlabel"> View the wall </label>
         
     
@@ -42,7 +42,9 @@
     </div>
     
     <div data-role = "page" id="page2" data-theme = "d">
+    <div data-role = "content" id="images">
     <img style="display:none;width:200px;height:200px;" id="image" src="" />
+    </div>
     </div>
     
 </body>
