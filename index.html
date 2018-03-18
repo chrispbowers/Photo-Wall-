@@ -10,15 +10,13 @@
 <link rel="stylesheet" href="jquery.mobile-1.4.5/themes/fullTheme1.css" />
 <link rel="stylesheet" href="jquery.mobile-1.4.5/themes/jquery.mobile.icons.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<!-- Framework7 reference links--> 
-<link rel="stylesheet" href="framework7-2.0.8/dist/js/framework7.min.js" />
-<link rel="stylesheet" href="framework7-2.0.8/dist/css/framework7.md.min.css" />
-<link rel="stylesheet" href="framework7-2.0.8/dist/css/framework7-icons.css">
-<link rel="icon" href="#">
+
 <!-- JQuery-mobile script tags --> 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="index.js"></script>
+    
+<script src="cordova.js" type="text/javascript"></script>   
 </head>
 
 <body>
@@ -29,9 +27,9 @@
     </div>
         
     <div data-role = "main" class = "ui-content.">
-    <a class="ui-btn ui-alt-icon  ui-icon-camera ui-btn-icon-bottom  ui-corner-all"> </a>
+    <a class="ui-btn ui-alt-icon  ui-icon-camera ui-btn-icon-bottom  ui-corner-all" onclick="capturePhoto();"> </a>
     <label id="addlabel">Add to wall </label>
-    <a class="ui-btn ui-icon-eye ui-alt-icon ui-btn-icon-bottom ui-corner-all  "> </a>
+    <a class="ui-btn ui-icon-eye ui-alt-icon ui-btn-icon-bottom ui-corner-all" onclick="window.location.href='page2'"> </a>
     <label id="viewlabel"> View the wall </label>
         
     
@@ -42,9 +40,10 @@
     </div>
     
     </div>
-
-
-
+    
+    <div data-role = "page" id="page2" data-theme = "d">
+    <img style="display:none;width:200px;height:200px;" id="image" src="" />
+    </div>
     
 </body>
 </html>
