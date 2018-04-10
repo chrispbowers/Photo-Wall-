@@ -24,38 +24,49 @@ function onPhotoDataSuccess(imageData) {
 	var image = document.getElementById('myImage');
 	myImage.style.display = 'block';
 	myImage.src = "data:image/jpeg;base64," + imageData;
+    onAddPhoto();
 }
 
 function onFail(message) {
       alert('Failed because: ' + message);
 }
 
-Backendless.Data.of("PHOTOS").find().then(processResults).catch(error);
+//Backendless.Data.of("PHOTOS").find().then(processResults).catch(error);
 function processResults(photos){
     
 //add each photo
 for (var i = 0; i < photos.length; i++) {
- $("#images").append(photos[i].Image);
+ $("#myImage").append(photos[i].Image);
 }
     
 //refresh the table
-$("#images").content('refresh');
+$("#myImage").content('refresh');
 }
  function error(err){
-     alert(err); 
+     console.log("error1 " + err); 
  }
 
-$(document).on(onPhotoDataSuccess, onAddPhoto);
+
 
 //Add photo to backendless table
 function onAddPhoto() {
 console.log("Photo has been added");
+
+var byteArray = new Blob(["data:image/jpg;base64," + imageData]);
+ 
+Backendless.Files.saveFile( "testfolder", "testimage.jpg", byteArray, true )
+ .then( function( savedFileURL ) {
+    console.log( "file has been saved - " + savedFileURL );
+  })
+ .catch( function( error ) {
+    console.log( "error2 - " + error.message );
+  }); 
     
-var photoimg = $("#images").val();    
+//var photoimg = $("#myImage").val();    
     
-var newPhoto = imageData ;
-newPhoto.photos = photoimg;
-Backendless.Data.of("Photos").save(newPhoto).then(saved).catch(error);
+//var newPhoto =  image;
+//newPhoto.photos = photoimg;
+//Backendless.Data.of("Photos").save(newPhoto).then(saved).catch(error);
  
 }
     
