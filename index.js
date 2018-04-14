@@ -31,10 +31,20 @@ function onFail(message) {
       alert('Failed because: ' + message);
 }
 
+<<<<<<< HEAD
 
 function processResults(photos){
     
 
+=======
+//Backendless.Data.of("PHOTOS").find().then(processResults).catch(error);
+function processResults(photos){
+    
+//add each photo
+for (var i = 0; i < photos.length; i++) {
+ $("#myImage").append(photos[i].Image);
+}
+>>>>>>> 0aae58df170c56513a72bdd87e3f33c55ccacff3
     
 //refresh the table
 $("#myImage").content('refresh');
@@ -51,7 +61,11 @@ console.log("Photo has been added");
 
 var byteArray = new Blob(["data:image/jpg;base64," + imageData]);
  
+<<<<<<< HEAD
 Backendless.Files.saveFile( "Images" , "testimage.jpg", byteArray, true )
+=======
+Backendless.Files.saveFile( "testfolder", "testimage.jpg", byteArray, true )
+>>>>>>> 0aae58df170c56513a72bdd87e3f33c55ccacff3
  .then( function( savedFileURL ) {
     console.log( "file has been saved - " + savedFileURL );
   })
@@ -59,7 +73,15 @@ Backendless.Files.saveFile( "Images" , "testimage.jpg", byteArray, true )
     console.log( "error2 - " + error.message );
   }); 
     
+<<<<<<< HEAD
 
+=======
+//var photoimg = $("#myImage").val();    
+    
+//var newPhoto =  image;
+//newPhoto.photos = photoimg;
+//Backendless.Data.of("Photos").save(newPhoto).then(saved).catch(error);
+>>>>>>> 0aae58df170c56513a72bdd87e3f33c55ccacff3
  
 }
     
