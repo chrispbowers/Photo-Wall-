@@ -17,13 +17,13 @@ function onDeviceReady() {
 
 function capturePhoto() {
 	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-	destinationType: destinationType.DATA_URL });
+	destinationType: destinationType.DATA_URI });
 }
 	
 function onPhotoDataSuccess(imageData) {
 	var image = document.getElementById('myImage');
-	myImage.style.display = 'block';
-	myImage.src = "data:image/jpeg;base64," + imageData;
+	image.style.display = 'block';
+	image.src = "data:image/jpeg;base64," + imageData;
     onAddPhoto();
 }
 
@@ -52,18 +52,15 @@ $("#myImage").content('refresh');
 
 //Add photo to backendless table
 function onAddPhoto() {
-console.log("Photo has been added");
-
-var byteArray = new Blob(["data:image/jpg;base64," + imageData]);
- 
-
-Backendless.Files.saveFile( "Images" , "testimage.txt", byteArray, true )
-	.then( function( savedFileURL ) {
-    console.log( "file has been saved - " + savedFileURL );
+	
+Backendless.Files.upload( testImage.jpg, Images, true)
+ .then( function( fileURL ) {
   })
  .catch( function( error ) {
-    console.log( "error2 - " + error.message );
-  }); 
+  });{
+    console.log( "file has been saved - " + savedFileURL );
+  }
+ 
     
  
 }
