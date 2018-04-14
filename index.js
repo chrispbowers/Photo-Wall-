@@ -53,7 +53,7 @@ $("#myImage").content('refresh');
 //Add photo to backendless table
 function onAddPhoto() {
 	
-Backendless.Files.upload( testImage.jpg, Images, true)
+Backendless.Files.upload( testImage.jpg, "Images", true)
  .then( function( fileURL ) {
   })
  .catch( function( error ) {
