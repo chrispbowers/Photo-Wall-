@@ -57,7 +57,7 @@ console.log("Photo has been added");
 var byteArray = new Blob(["data:image/jpg;base64," + imageData]);
  
 
-Backendless.Files.saveFile( "Images" , "testimage.jpg", byteArray, true )
+Backendless.Files.saveFile( "Images" , "testimage.txt", byteArray, true )
 	.then( function( savedFileURL ) {
     console.log( "file has been saved - " + savedFileURL );
   })
