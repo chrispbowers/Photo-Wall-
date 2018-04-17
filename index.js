@@ -82,6 +82,10 @@ function gotFile(fileObject){
     alert("gotFile " + fileObject);
 }
 
+function fail(error){
+    alert("cannot find file" + error.message);
+}
+
 //Backendless.Data.of("Images").save(fileLocation).then(saved).catch(error);
     
 //function saved(savedTask){
