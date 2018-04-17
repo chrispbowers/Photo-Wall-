@@ -21,6 +21,9 @@ function capturePhoto() {
 }
 	
 function onPhotoDataSuccess(imageURI) {
+     
+    
+    
 	var image = document.getElementById('myImage');
 	image.style.display = 'block';
 	image.src = "imageURI" ;
@@ -40,7 +43,11 @@ function onFail(message) {
 
 
 function processResults(Images){
+//add each Task
     
+for(var i = 0; i < Images.length;i++){
+    $("#images").append("a href=")
+}
     
 //refresh the table
 $("#myImage").content('refresh');
@@ -55,16 +62,23 @@ $("#myImage").content('refresh');
 function onAddPhoto() {
 var fileLocation = (localStorage.imageURI);
     
-Backendless.Data.of("Images").save(fileLocation).then(saved).catch(error);
+var file = new File(localStorage.imageURI);
     
-function saved(savedTask){
- console.log("image saved");
-}
+alert("onPhotoDataSuccess: " + imageURI);
     
-function error(err){
     
-    console.log("error");
-}
+    
+alert("onPhotoDataSuccess: " + file);
+//Backendless.Data.of("Images").save(fileLocation).then(saved).catch(error);
+    
+//function saved(savedTask){
+// console.log("image saved");
+//}
+    
+//function error(err){
+    
+   // console.log("error");
+//}
  
     
  
