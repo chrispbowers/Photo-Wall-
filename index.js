@@ -62,13 +62,19 @@ $("#myImage").content('refresh');
 //Add photo to backendless table
 function onAddPhoto(imageURI) {
 alert("AddPhoto");    
-var file = new File(imageURI);
+window.resolveLocalFileSystemURI(imageURI,function(fileEntry){
+   fileEntry.file( function(file) {
+         alert("resolveLocalFileSystemURI: " + file);
+       
+        // upload to backendless
+   })
+ 
+}
+
     
-alert("onPhotoDataSuccess: " + imageURI);
     
     
-    
-alert("onPhotoDataSuccess: " + file);
+
 //Backendless.Data.of("Images").save(fileLocation).then(saved).catch(error);
     
 //function saved(savedTask){
