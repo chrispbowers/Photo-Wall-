@@ -67,8 +67,10 @@ window.resolveLocalFileSystemURI(imageURI,function(fileEntry){
          alert("resolveLocalFileSystemURI: " + file);
        
         // upload to backendless
-   })
+   });
  
+});
+    
 }
 
     
