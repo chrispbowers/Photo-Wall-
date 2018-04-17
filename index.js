@@ -16,12 +16,13 @@ function onDeviceReady() {
 }
 
 function capturePhoto() {
+    alert("capturePhoto");
 	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
 	destinationType: destinationType.FILE_URI });
 }
 	
 function onPhotoDataSuccess(imageURI) {
-     
+     alert("onPhoto" + imageURI);
     
     
 	var image = document.getElementById('myImage');
@@ -60,6 +61,7 @@ $("#myImage").content('refresh');
 
 //Add photo to backendless table
 function onAddPhoto() {
+alert("AddPhoto");
 var fileLocation = (localStorage.imageURI);
     
 var file = new File(localStorage.imageURI);
