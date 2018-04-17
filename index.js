@@ -62,20 +62,25 @@ $("#myImage").content('refresh');
 //Add photo to backendless table
 function onAddPhoto(imageURI) {
 alert("AddPhoto");    
-window.resolveLocalFileSystemURI(imageURI,function(fileEntry){
-   fileEntry.file( function(file) {
-         alert("resolveLocalFileSystemURI: " + file);
-       
-        // upload to backendless
-   });
- 
-});
+window.resolveLocalFileSystemURL(cordova.file.tempDirectory,gotFS,fail);
     
 }
 
+function gotFS(fileSystem){
+    alert("gotFS " + fileSystem);
+    var fileName = imageURI.split('/').pop();
+    fileSystem.getFile(fileName,{create: false,exclusive: false}, gotFileEntry,fail)
     
+}
     
+function gotFileEntry(fileEntry){
+    alert("gotFileEntry " + fileEntry);
+    fileEntry.file(gotFile,fail);
+}
     
+function gotFile(fileObject){
+    alert("gotFile " + fileObject);
+}
 
 //Backendless.Data.of("Images").save(fileLocation).then(saved).catch(error);
     
