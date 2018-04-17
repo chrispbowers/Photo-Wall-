@@ -39,7 +39,7 @@ function onFail(message) {
 
 
 
-function processResults(photos){
+function processResults(Images){
     
     
 //refresh the table
