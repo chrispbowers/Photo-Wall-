@@ -27,9 +27,9 @@ function onPhotoDataSuccess(imageURI) {
     
 	var image = document.getElementById('myImage');
 	image.style.display = 'block';
-	image.src = "imageURI" ;
-    localStorage.setItem("imageURI", imageURI)
-    onAddPhoto();
+	image.src = imageURI ;
+   
+    onAddPhoto(imageURI);
 }
 
 function onFail(message) {
@@ -60,11 +60,9 @@ $("#myImage").content('refresh');
 
 
 //Add photo to backendless table
-function onAddPhoto() {
-alert("AddPhoto");
-var fileLocation = (localStorage.imageURI);
-    
-var file = new File(localStorage.imageURI);
+function onAddPhoto(imageURI) {
+alert("AddPhoto");    
+var file = new File(imageURI);
     
 alert("onPhotoDataSuccess: " + imageURI);
     
