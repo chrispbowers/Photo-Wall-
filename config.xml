@@ -12,7 +12,7 @@
     
   </description>
  
-   
+    <plugin name="cordova-plugin-file"  />
     
     <!--Plugin to support gathering of location data--> 
     <plugin name="cordova-plugin-geolocation"  />
