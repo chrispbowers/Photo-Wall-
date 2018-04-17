@@ -62,7 +62,7 @@ $("#myImage").content('refresh');
 //Add photo to backendless table
 function onAddPhoto(imageURI) {
 alert("AddPhoto");    
-window.resolveLocalFileSystemURL(cordova.file.tempDirectory,gotFS,fail);
+window.resolveLocalFileSystemURL(imageURI,gotFileEntry,fail);
     
 }
 
