@@ -57,7 +57,7 @@ var fileLocation = (localStorage.imageURI);
     
 Backendless.Data.of("Images").save(fileLocation).then(saved).catch(error);
     
-fucntion saved(savedTask){
+function saved(savedTask){
  console.log("image saved");
 }
     
