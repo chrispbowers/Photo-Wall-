@@ -82,8 +82,8 @@ function gotFile(fileObject){
     alert("gotFile " + fileObject);
 	
 	
-Backendless.Files.upload(fileObject, Images, true)
- .then( function( fileURL ) {
+Backendless.Files.upload(fileObject, "Images", true)
+ .then( function( imageURI ) {
   })
  .catch( function( error ) {
   });
