@@ -82,7 +82,7 @@ function gotFile(fileObject){
     alert("gotFile " + fileObject);
 	
 	
-Backendless.Files.upload(fileObject, "My-folder", true)
+Backendless.Files.upload(fileObject, Images, true)
  .then( function( fileURL ) {
   })
  .catch( function( error ) {
