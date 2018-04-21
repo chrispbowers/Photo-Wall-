@@ -86,13 +86,13 @@ function fail(error){
     alert("cannot find file" + error.message);
 }
 
-Backendless.Files.upload( fileObject, "Images", false)
+Backendless.Files.upload(gotFile.fileObject, "Images", false)
  .then( function( fileURL ) {
   })
  .catch( function( error ) {
   });
  
-  alert("File Uploadaed " + fileObject);
+  alert("File Uploadaed " + gotFile.fileObject);
  
 
     
