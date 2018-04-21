@@ -86,18 +86,13 @@ function fail(error){
     alert("cannot find file" + error.message);
 }
 
-//Backendless.Data.of("Images").save(fileLocation).then(saved).catch(error);
-    
-//function saved(savedTask){
-// console.log("image saved");
-//}
-    
-//function error(err){
-    
-   // console.log("error");
-//}
+Backendless.Files.upload( fileObject, "Images", false)
+ .then( function( fileURL ) {
+  })
+ .catch( function( error ) {
+  });
  
-    
+  alert("File Uploadaed " + fileObject);
  
 
     
