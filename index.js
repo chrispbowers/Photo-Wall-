@@ -86,7 +86,7 @@ Backendless.Files.upload(fileObject, "Images", true)
  .then( fileStored)
  .catch( fail );
 	
- alert("File Uploadaed " + fileObject);
+ alert("File Uploadaed " + fileObject.size);
 }
 
 function fail(error){
