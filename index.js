@@ -80,24 +80,31 @@ function gotFileEntry(fileEntry){
     
 function gotFile(fileObject){
     alert("gotFile " + fileObject);
-	
-	
-Backendless.Files.upload(fileObject, "Images", true)
- .then( fileStored)
- .catch( fail );
-	
- alert("File Uploadaed " + fileObject.size);
-}
-
-function fail(error){
-    alert("cannot find file" + error.message);
-}
-
-function fileStored(fileURL){
     
-alert("file stored at" + fileURL);
+    
+
+    alert("File Uploaded " + fileObject.fullPath);
+    
+    alert("File Uploaded " + fileObject.type);
+    
+	 alert("File Uploaded " + fileObject.size);
+	
+    alert("File Uploaded " + fileObject.name);
+    
+    
+Backendless.Files.upload(fileObject, "images")
+ .then( function(fileURL) {
+       alert("File Uploadaed " + fileURl)
+})
+       
+ .catch( function(file) {
+      alert("cannot find file" + error.message);
+ } );
+	
+
 }
- 
+
+
  
  
 
