@@ -83,10 +83,8 @@ function gotFile(fileObject){
 	
 	
 Backendless.Files.upload(fileObject, "Images", true)
- .then( function( fileURL) {
-  })
- .catch( function( error ) {
-  });
+ .then( fileStored)
+ .catch( fail );
 	
  alert("File Uploadaed " + fileObject);
 }
@@ -95,7 +93,10 @@ function fail(error){
     alert("cannot find file" + error.message);
 }
 
-
+function fileStored(fileURL){
+    
+alert("file stored at" + fileURL);
+}
  
  
  
