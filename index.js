@@ -79,29 +79,22 @@ function gotFileEntry(fileEntry){
 }
     
 function gotFile(fileObject){
-    alert("gotFile " + fileObject);
-    
-    
-
-    alert("File Uploaded " + fileObject.fullPath);
-    
-    alert("File Uploaded " + fileObject.type);
-    
-	 alert("File Uploaded " + fileObject.size);
+   
+	//read file into a byte array and then store the byte array to Backendless
+	var reader = new FileReader();
+    	reader.onloadend = function() {
+        	var byteArray = new Blob([new Uint8Array(this.result)], { type: "image/jpg" });
+            
+        	Backendless.Files.saveFile( "testfolder", fileObject.name, byteArray, true )
+        	.then( function( savedFileURL ) {
+            		console.log( "file has been saved - " + savedFileURL );
+        	})
+        	.catch( function( error ) {
+            	console.log( "error - " + error.message );
+        	}); 
+    	};
 	
-    alert("File Uploaded " + fileObject.name);
-    
-    
-Backendless.Files.upload(fileObject, "images")
- .then( function(fileURL) {
-       alert("File Uploadaed " + fileURl)
-})
-       
- .catch( function(file) {
-      alert("cannot find file" + error.message);
- } );
-	
-
+    	reader.readAsArrayBuffer(fileObject);
 }
 
 
